@@ -23,7 +23,7 @@
                 </div>
                 <div class="header__contacts">
                     <a href="tel:+380661124287" class="header__phone">+380 66 112 42 87</a>
-                    <button class="button">Заказать звонок!</button>
+                    <button data-modal="consultation" class="button">Заказать звонок</button>
                 </div>
             </header>
 
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main">заказать консультацию</button>
+                <button data-modal="consultation" class="button button_main">заказать консультацию</button>
                 <div class="promo__link">
                     или
                     <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
@@ -88,7 +88,7 @@
             <div class="consultation__descr">
                 Просто заполните форму заявки<br> и мы перезвоним Вам в течении 10 минут
             </div>
-            <form class="feed-form" action="#">
+            <form id="consultation-form" class="feed-form" action="#">
                 <input name="name" required placeholder="Ваше имя" type="text">
                 <input name="phone" required placeholder="Ваш телефон" type="number">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
@@ -407,9 +407,59 @@
         </div>
     </section>
 
+    <footer class="footer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2594.6654874187498!2d32.08236649999999!3d49.434137899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d14b74ed50f70d%3A0xae178de0299a2170!2z0LLRg9C70LjRhtGPINCS0LXRgNGF0L3RjyDQk9C-0YDQvtCy0LAsIDE3OCwg0KfQtdGA0LrQsNGB0LgsINCn0LXRgNC60LDRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMTgwMDA!5e0!3m2!1suk!2sua!4v1693837529186!5m2!1suk!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="footer__info">
+            <address class="footer__addr">Черкассы, улица Верхня Горова, 178</address>
+            <a href="tel:+380661124287" class="footer__phone">+380 66 112 42 87</a>
+            <div class="footer__social">
+                <a href="" class="footer__social-item"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="" class="footer__social-item"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="footer__social-item"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон" type="number">
+                <input name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">Заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input name="name" required placeholder="Ваше имя" type="text">
+                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="email" required placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">купить</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script src="https://kit.fontawesome.com/fd7db7ffb1.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
